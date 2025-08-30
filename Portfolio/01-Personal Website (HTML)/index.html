@@ -1,12 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Website - HTML</title>
+    <meta charset="UTF-8">
+    <title>Eddy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/KEVIN.png" type="image/x-icon">
 </head>
+
 <body>
-  
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="header-content">
+            <div class = "side-by-side">
+                <img src="images/KEVIN.png" alt="Logo" width="50" height="50">
+                <h2 class="logo-text">Eddy</h2>
+                <h2 class="logo-text2">Navegation</h2>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT WRAPPER ===== -->
+    <div class="main-content">
+
+        <!-- ===== HERO SECTION ===== -->
+        <div class="hero-wrapper">
+            <div class="hero-content">
+                <h1 class="mainTitle">Hello, I'm Eduardo Moreno.</h1>
+                <h1 class="mainTitle">I'm a human.</h1>
+                <p class="tagline">(a funny one)</p>
+            </div>
+
+            <!-- Decorative blob -->
+            <div class="blob" aria-hidden="true"></div>
+        </div>
+
+        <!-- ===== MAIN SECTIONS ===== -->
+        <main>
+
+            <!-- About Me -->
+            <hr>
+            <section id="about-me">
+                <h1>About me</h1>
+                <table style="border-collapse: collapse; border: none; width: 100%;">
+                    <tr>
+                        <td style="border: none; padding: 0;">
+                            <img src="images/Yo.jpg" alt="My profile picture" width="250" height="250">
+                        </td>
+                        <td style="border: none; padding-left: 10px; vertical-align: top;">
+                            <p class="usualText2">I am a computer science student at UP Guadalajara.</p>
+                            <p class="usualText2">I am interested in web development and artificial intelligence.</p>
+                            <p class="usualText2">Zapopan, Jalisco, Mexico</p>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+            <hr>
+
+            <!-- Background -->
+            <section id="Background">
+                <h1 class="Subtext2">Background</h1>
+                <p>I was born in Guadalajara, Jalisco. I'm an electronics system technologist.</p>
+                <p>I have a passion for technology and programming. I started learning to code when I was 16 years old.</p>
+                <p>I am studying two careers: Digital Animation Engineering and Computer Science Engineering.</p>
+
+                <h1 class="Subtext2">Goal</h1>
+                <p>My goal is to become a backend developer.</p>
+            </section>
+
+            <!-- Education -->
+            <section id="Education">
+                <h1 class="Subtext2">Education</h1>
+                <table border="1" cellspacing="10" cellpadding="10" style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th class="TableTitle">Academic Level</th>
+                            <th class="TableTitle">Logo</th>
+                            <th class="TableTitle">School</th>
+                            <th class="TableTitle">Start</th>
+                            <th class="TableTitle">End</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Elementary</td>
+                            <td><img src="images/AntonioCaso.jpg" alt="Antonio Caso logo" width="100" height="100"></td>
+                            <td>Antonio Caso</td>
+                            <td>2009</td>
+                            <td>2015</td>
+                        </tr>
+                        <tr>
+                            <td>Middle School</td>
+                            <td><img src="images/AntonioCaso.jpg" alt="Antonio Caso logo" width="100" height="100"></td>
+                            <td>Antonio Caso</td>
+                            <td>2015</td>
+                            <td>2018</td>
+                        </tr>
+                        <tr>
+                            <td>High School</td>
+                            <td><img src="images/Ceti.jpg" alt="CETI logo" width="150" height="100"></td>
+                            <td>CETI Colomos</td>
+                            <td>2018</td>
+                            <td>2022</td>
+                        </tr>
+                        <tr>
+                            <td>University</td>
+                            <td><img src="images/up-logo.jpg" alt="UP logo" width="100" height="100"></td>
+                            <td>Universidad Panamericana GDL</td>
+                            <td>2022</td>
+                            <td>2027</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Favorite Quote -->
+            <section id="Favorite-Quote">
+                <img src="images/lincon.jpg" alt="Abraham Lincoln" width="200" height="250">
+                <div class="quote-content">
+                    <h1 class="Subtext2">Favorite Quote</h1>
+                    <p class="ClassyQuote">"I'm not bound to succeed, but I am bound to live up to the light I have."</p>
+                    <p class="ClassyText">- Abraham Lincoln</p>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- Skills -->
+            <section id="Skills">
+                <h1 class="Subtext2">Skills</h1>
+                <ul>
+                    <li>Programming in Python 50%</li>
+                    <li>Programming in Java 30%</li>
+                    <li>Creativity 60%</li>
+                    <li>Illustration 60%</li>
+                    <li>Video Editing 20%</li>
+                </ul>
+            </section>
+
+            <!-- Hobbies -->
+            <section id="Hobbies">
+                <h1 class="Subtext2">Hobbies</h1>
+                <p>My hobbies are watching movies, listening to music, drawing, reading, and playing videogames.</p>
+            </section>
+
+            <!-- Food -->
+            <section id="Food">
+                <h1 class="Subtext2">Food</h1>
+                <h4>Favorite cuisines</h4>
+                <ul>
+                    <li>Mexican</li>
+                    <li>Italian</li>
+                    <li>Japanese</li>
+                    <li>Turkish</li>
+                    <li>Korean</li>
+                </ul>
+
+                <h4>Least favorite cuisines</h4>
+                <ul>
+                    <li>English</li>
+                    <li>Lebanese</li>
+                    <li>Scottish</li>
+                </ul>
+            </section>
+
+            <!-- Books, Movies & TV Shows -->
+            <section id="Books-Movies-TV">
+                <h1 class="Subtext2">Books, Movies and TV Shows</h1>
+                <table style="border-collapse: collapse; border: none; width:100%;">
+                    <tr>
+                        <!-- Books -->
+                        <td style="border: none; padding-left: 10px; vertical-align: top; width: 33%;">
+                            <img src="images/1984.jpg" alt="1984 book cover" width="200" height="250">
+                            <p class="Subtext">Favorite Books</p>
+                            <ul>
+                                <li>1984 by George Orwell</li>
+                                <li>I, Robot by Isaac Asimov</li>
+                                <li>Death with Interruptions by José Saramago</li>
+                            </ul>
+                        </td>
+                        <!-- Movies -->
+                        <td style="border: none; padding-left: 10px; vertical-align: top; width: 33%;">
+                            <img src="images/aftersun.jpg" alt="Aftersun movie poster" width="200" height="250">
+                            <p class="Subtext">Favorite Movies</p>
+                            <ul>
+                                <li>Aftersun</li>
+                                <li>Whiplash</li>
+                                <li>The Fantastic Mr. Fox</li>
+                            </ul>
+                        </td>
+                        <!-- TV Shows -->
+                        <td style="border: none; padding-left: 10px; vertical-align: top; width: 33%;">
+                            <img src="images/atlanta.jpg" alt="Atlanta TV show poster" width="200" height="250">
+                            <p class="Subtext">Favorite TV Shows</p>
+                            <ul>
+                                <li>Atlanta</li>
+                                <li>After Life</li>
+                                <li>The Midnight Gospel</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+        </main>
+
+    </div> <!-- End main-content -->
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2025 Eduardo Moreno</p>
+        <p>Contact me at: <a href="mailto:0260522@up.edu.mx">0260522@up.edu.mx</a></p>
+        <p>Follow me on <a href="https://www.linkedin.com/in/jos%C3%A9-eduardo-moreno-paredes-3b4396316/">LinkedIn</a></p>
+        <p>GitHub profile: <a href="https://github.com/EduardoAzuul">EduardoAzuul</a></p>
+    </footer>
+
 </body>
 </html>
