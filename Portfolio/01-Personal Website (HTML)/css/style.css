@@ -5,8 +5,8 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background:
        
-      radial-gradient(circle at top right, #fe2a51 5%, transparent 15%), 
-      radial-gradient(circle at bottom left, rgb(243, 239, 33) 5%, transparent 15%),
+      radial-gradient(circle at top right, #fe2a51 200px, transparent 15%), 
+      radial-gradient(circle at bottom left, rgb(243, 239, 33) 200px, transparent 15%),
       #ffffff;
     margin: 0;   /* Remove browser default margin */
     padding: 0;  /* Remove browser default padding */
@@ -320,4 +320,28 @@ header a {
     height: auto;         /* Maintain aspect ratio */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
     transition: transform 0.3s ease; /* Optional: smooth hover effect */
+}
+
+.NavButtons {
+  display: flex;                 /* Arrange children in a row */
+  justify-content: space-around; /* Spread them evenly across */
+  width: 100%;
+  align-items: center;           /* Vertical alignment */
+  padding: 15px;
+}
+
+/* Make <a> look like styled headings */
+.NavButtons a {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-decoration: none;  /* Remove underline */
+  padding: 10px 20px;     /* Button-like padding */
+  border-radius: 8px;     /* Rounded corners */
+}
+
+.NavButtons a:hover {
+  background: #ffffff;  /* Highlight background */
+  color: #ff005d;         /* Change text color */
 }
