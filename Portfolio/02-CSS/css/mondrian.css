@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+
+.box {
+    position: absolute;
+    border: 4px solid #000;
+    box-sizing: border-box;
+}
+
+/* Large blue rectangle - left side */
+.box1 {
+    background-color: #0033cc;
+    border: 10px solid black;
+    position: absolute;
+    width: 180px;
+    height: 380px;
+    top: 0px;
+    left: 0px;
+}
+
+/* Yellow square - top center */
+.box2 {
+    background-color: #ffcc00;
+    border: 10px solid black;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 0px;
+    left: 190px;
+}
+
+/* White rectangle - top right */
+.box3 {
+    background-color: white;
+    border: 10px solid black;
+    position: absolute;
+    width: 200px;   
+    height: 120px;
+    top: 0px;
+    left: 320px;
+}
+
+/* Red square - center right */
+.box4 {
+    background-color: #cc0000;
+    border: 10px solid black;
+    position: absolute;
+    width: 200px;
+    height: 140px;
+    top: 130px;
+    left: 320px;
+}
+
+/* White rectangle - center */
+.box5 {
+    background-color: white;
+    border: 10px solid black;
+    position: absolute;
+    width: 120px;
+    height: 140px;
+    top: 130px;
+    left: 190px;
+}
+
+/* Large white rectangle - bottom left */
+.box6 {
+    background-color: white;
+    border: 10px solid black;
+    position: absolute;
+    width: 180px;
+    height: 210px;
+    top: 390px;
+    left: 0px;
+}
+
+/* Small yellow rectangle - bottom center left */
+.box7 {
+    background-color: #ffcc00;
+    border: 10px solid black;
+    position: absolute;
+    width: 60px;
+    height: 100px;
+    top: 280px;
+    left: 190px;
+}
+
+/* White rectangle - bottom center */
+.box8 {
+    background-color: white;
+    border: 10px solid black;
+    position: absolute;
+    width: 60px;
+    height: 100px;
+    top: 280px;
+    left: 260px;
+}
+
+/* White rectangle - bottom right */
+.box9 {
+    background-color: white;
+    border: 10px solid black;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 280px;
+    left: 320px;
+}
+
+/* Small white rectangle - bottom center left */
+.box10 {
+    background-color: white;
+    border: 10px solid black;
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    top: 390px;
+    left: 190px;
+}
+
+/* Blue rectangle - bottom right */
+.box11 {
+    background-color: #0033cc;
+    border: 10px solid black;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 390px;
+    left: 320px;
+}
+
+/* Red rectangle - bottom far right */
+.box12 {
+    background-color: #cc0000;
+    border: 10px solid black;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 390px;
+    left: 420px;
+}
+
+/* Small white rectangles for additional grid structure */
+.box13 {
+    background-color: white;
+    border: 10px solid black;
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    top: 500px;
+    left: 190px;
+}
+
+.box14 {
+    background-color: white;
+    border: 10px solid black;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 500px;
+    left: 320px;
+}

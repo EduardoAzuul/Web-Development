@@ -1,0 +1,87 @@
+body {
+  position: relative;
+  height: 500px; /* adjust as needed */
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+/* Diagonal positions */
+.box1 {
+  background-color: red;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+}
+.box2 {
+  background-color: blue;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 100px;
+}
+.box3 {
+  background-color: yellow;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0px;
+  left: 200px;
+}
+.box4 {
+  background-color: red;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  left: 100px;
+}
+.box5 {
+  background-color: blue;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  left: 200px;
+}
+.box6 {
+  background-color: yellow;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  left: 300px;
+}
+.box7 {
+  background-color: red;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 200px;
+  left: 200px;
+}
+.box8 {
+  background-color: blue;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 200px;
+  left: 300px;
+}
+.box9 {
+  background-color: yellow;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 200px;
+  left: 400px;
+}
+
+
+

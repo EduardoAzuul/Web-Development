@@ -1,3 +1,29 @@
-body {
-    margin: 0;
+div {
+  width: 300px;
+  height: 400px;
+  display: flex;          
+  align-items: center;
+  color: white;
+  position: absolute;     
+}
+
+/* First box */
+.box1 {
+  background-color: rgb(4, 4, 213);
+  top: 100px;
+  left: 0px;
+}
+
+/* Second box */
+.box2 {
+  background-color: rgb(225, 193, 13);
+  top: 100px;  /* moves it diagonally down */
+  left: 300px;
+}
+
+/* Third box */
+.box3 {
+  background-color: rgb(229, 12, 12);
+  top: 100px;
+  left: 600px;
 }
