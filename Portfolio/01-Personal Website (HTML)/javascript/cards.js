@@ -1,54 +1,80 @@
 // Array of people data
 const people = [
     {
-        name: "Albert Einstein",
-        birth: "14 March 1879",
-        death: "18 April 1955",
-        profession: "Physicist",
-        achievements: "Theory of Relativity, Nobel Prize in Physics (1921)",
-        image: "images/einstein.jpg"
-    },
-    {
-        name: "Frida Kahlo",
-        birth: "6 July 1907",
-        death: "13 July 1954",
-        profession: "Painter",
-        achievements: "Iconic self-portraits, Surrealist art",
-        image: "images/frida.jpg"
-    },
-    {
-        name: "Nikola Tesla",
-        birth: "10 July 1856",
-        death: "7 January 1943",
-        profession: "Inventor",
-        achievements: "AC current, Tesla coil, radio technology",
-        image: "images/tesla.jpg"
-    },
-    {
-        name: "Marie Curie",
-        birth: "7 November 1867",
-        death: "4 July 1934",
-        profession: "Scientist",
-        achievements: "First woman to win Nobel Prize, discovered radium and polonium",
-        image: "images/curie.jpg"
-    },
-    {
         name: "Leonardo da Vinci",
         birth: "15 April 1452",
         death: "2 May 1519",
         profession: "Artist, Inventor",
         achievements: "Mona Lisa, The Last Supper, Flying machine designs",
-        image: "images/leonardo.jpg"
+        image: "PeoplePortraits/leonardo.jpg"
     },
     {
-        name: "Nelson Mandela",
-        birth: "18 July 1918",
-        death: "5 December 2013",
-        profession: "Political Leader",
-        achievements: "Anti-apartheid revolutionary, Nobel Peace Prize (1993)",
-        image: "images/mandela.jpg"
+        name: "George Orwell",
+        birth: "25 June 1903",
+        death: "21 January 1950",
+        profession: "Writer, Journalist",
+        achievements: "1984, Animal Farm, Essays on politics and society",
+        image: "PeoplePortraits/orwell.jpg"
+    },
+    {
+        name: "Rusowsky",
+        birth: "28 October 1996",
+        death: null,
+        profession: "Musician, Producer",
+        achievements: "Known for bedroom pop and indie electronic music in Spain",
+        image: "PeoplePortraits/rusowsky.jpg"
+    },
+    {
+        name: "NSQK",
+        birth: "22 December 1996",
+        death: null,
+        profession: "Musician, Songwriter",
+        achievements: "Mexican artist blending pop, R&B and electronic influences",
+        image: "PeoplePortraits/nsqk.jpg"
+    },
+    {
+        name: "Guillermo del Toro",
+        birth: "9 October 1964",
+        death: null,
+        profession: "Film Director, Producer, Screenwriter",
+        achievements: "Pan’s Labyrinth, The Shape of Water (Academy Award winner), Pacific Rim",
+        image: "PeoplePortraits/gillermo.webp"
+    },
+    {
+        name: "Penta El Zero Miedo",
+        birth: "5 February 1985",
+        death: null,
+        profession: "Professional Wrestler",
+        achievements: "AAA, AEW titles; joined WWE with brother Rey Fénix in 2024",
+        image: "PeoplePortraits/penta.webp"
+    },
+    {
+        name: "Rey Fénix",
+        birth: "30 December 1990",
+        death: null,
+        profession: "Professional Wrestler",
+        achievements: "AAA, AEW champion; joined WWE with Penta El Zero Miedo in 2024",
+        image: "PeoplePortraits/reyFenix.webp"
+    },
+    {
+        name: "El Hijo del Vikingo",
+        birth: "29 April 1997",
+        death: null,
+        profession: "Professional Wrestler",
+        achievements: "AAA Mega Champion, internationally acclaimed luchador with innovative aerial style",
+        image: "PeoplePortraits/vikingo.png"
+    },
+    {
+        name: "Psycho Clown",
+        birth: "16 December 1985",
+        death: null,
+        profession: "Professional Wrestler",
+        achievements: "AAA main star, multiple championships, iconic mask, part of Los Psycho Circus",
+        image: "PeoplePortraits/psycho.webp"
     }
+    
 ];
+
 
 // Pagination variables
 let currentPage = 0;
@@ -62,7 +88,8 @@ function createCard(person) {
     
     card.innerHTML = `
         <img src="${person.image}" alt="${person.name}" class="card-image" 
-             onerror="this.src='images/placeholder.jpg'; this.alt='Image not found';">
+             ; this.alt='Image not found';">
+             
         <div class="card-content">
             <h2 class="card-name">${person.name}</h2>
             <p><strong>Date of Birth:</strong> ${person.birth}</p>
