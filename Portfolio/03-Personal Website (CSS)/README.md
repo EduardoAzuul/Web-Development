@@ -1,51 +1,95 @@
-# Personal Website - CSS
+# Personal Website - HTML
 
-This exercise will guide us to learn and experience the basic concepts of CSS in the context of an HTML project. We will start this project from the end point of the **Personal Website - HTML** exercise.
-
----
-
-### Look & feel of elements
-
-- Add a background color to your site
-- Change the font of all the site to:
-  - 'Merriweather', serif
-- Make sure that all the allignment is centered
-- Change the font of all the h1s to:
-  - 'Sacramento', cursive
-  - Change the color to one that plays well with your background.
-  - Increase the font size to 5.5 rem
-  - Add a margin of 50px
-- Change the font to all h2s to:
-  - 'Montserrat', sans-serif
-  - Font size 2.5 rem
-  - Padd it 10px from below.
-  - Choose a secondary color that also plays well with your background
-- Change h3s to
-  - 'Montserrat', sans-serif
-  - Select a third color.
-- Modify the hr's to:
-  - Dotted, color #EAF6F6 and width 6px
-  - No bottom border
-  - Width in the screen of 4%
-  - Margins of 100px left and right
-- Change the L&F of links
-
-  - Eliminate the underlining
-  - Make them bold.
-  - On hover over, change its color to green
-
-- Modify all logos to be of max size 100 x 100 px and make them round
+This exercise will guide us to learn most of the html basic elements. This guide will be used in later projects, so make sure that you have all the requested sections in the suggested tags and styles.
 
 ---
 
-### Layouts & Organization
+### Basic structures
 
-- Add divs for every section in both pages
-- For every even section change the background to a secondary/alternate color that still works with your palette.
-- Change the heroes section to a meet the team version
-  https://www.w3schools.com/howto/howto_css_team.asp
+- Add your **name** as the main title
+- Place your current job title and address
+- A small personal presentation stating how you want to be known.
+- Add your favorite quote
+- Add a subsection named **Background**
+  - Add a small text talking about your background and main goal in life as a professional
+  - Add a subsubsection named **Education**
+    - Create a list of all the schools you have attended from elementary school until today. Put in the years and the name of the school. Make sure that the years are emphasized and the name is bold.
+  - Add a subsubsection named **Skills**
+    - List in order your top 5 technical skills followed by a number stating the percentage of how much you think you master that skill
+- Add a subsection named **Hobbies**
+  - Add a subsubsection named **Favorite food**
+    - Out of the following cuisines:
+      Thai, French, Japanese, Indian, Korean, Spanish, German, Italian, Australian, Scottish, Mexican, Turkish, Greek, Lebanese, Caribean, Arab, English, Russian, Portuguese, Filipino
+    - List your top 5 cuisines
+    - List the bottom 3
+  - Create a list with the following categories: Books, Movies & TV Shows
+    - As a sublist in each entry list your favorite 3 of each category
 
-- Create a dotted boundary around the form and change its background
-- Make all inputs rounded and set their backgrounds to a color that plays well with the background of the form
+---
 
-- Integrate the mountain and 2 clouds, and make the mountain static and the cloud sticky.
+### Images
+
+- Find the logo of your schools and place them in front of each entry you named them above.
+- Find an image of a Books, Movies & TV Show and place it at the beginning of each category
+- Add a picture of yourself and add it by your name at the beginning.
+- Fix the layout to have image side by side with basic info using tables.
+
+---
+
+### Navigation
+
+- Create a new page called destination.html
+- Create 5 sections, where each section will have:
+  - A picture of the destination
+  - The name of the destination as the title of the section
+  - A small text describing the destination
+  - A list of the following facts of that destination
+    - Province/State
+    - Country
+    - Population
+    - Latitude & longitude
+  - Flag of the country
+- Add a back link to the **homepage**
+- Create a link to your **destination** page from the **homepage** with the title _My Favorite Spots_.
+- Make sure you place an anchor destination at the beginning of each section
+- Add direct links to the other destinations from the **homepage**
+- Add direct links to the homepage of your educational institutions, make sure that the image also takes you there.
+
+---
+
+### Tables
+
+- Add a new section of **heroes/writers/musicians**, etc
+- Create a table that displays them horizontally (at least 3)
+- The table should contain:
+
+  - Picture
+  - Name
+  - Date of birth/Date of dead(if dead)
+  - Profession
+  - Some of their achievements or most famous work
+
+- Create a weekly schedule table with a column for date, start, end, description, place, type, notes, with and an icon to idenify if it is busy or free
+
+---
+
+### Forms
+
+- Add a weekly schedule form where they can register:
+
+  - Date [date field]
+  - Time start [time]
+  - Time end [time]
+  - Activity [text]
+  - Place [text]
+  - Type [drop]
+    - School
+    - Personal
+    - Profesional
+    - Familiar
+    - Other
+  - Notes [text area]
+  - Flag [color]
+  - Free/busy [check]
+
+- Use hrs to separate every section
