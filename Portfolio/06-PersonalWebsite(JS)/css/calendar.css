@@ -58,3 +58,21 @@
   transform: translateY(-2px);
   box-shadow: var(--shadow-medium);
 }
+
+.color-box {
+  width: 100%;      /* make it span the column width */
+  height: 40px;     /* rectangular swatch */
+  border: none;     /* remove default border */
+  border-radius: 6px;
+  cursor: pointer;  /* pointer cursor */
+  padding: 0;       /* remove default spacing */
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 20px;
+  font-size: 16px;
+  color: var(--color-text);
+} 
