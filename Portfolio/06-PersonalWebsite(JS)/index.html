@@ -1,12 +1,301 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Website - CSS</title>
+    <meta charset="UTF-8">
+    <title>Eddy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="icon" href="images/KEVIN.png" type="image/x-icon">
 </head>
-<body>
-  
+
+<body>  
+
+    <!-- ===== HEADER ===== -->
+
+    <header>
+    <div class="header-content">
+        <div class="side-by-side d-flex align-items-center justify-content-between">
+        <!-- My title -->
+        <p class="NavegationName mb-0 ps-3">Eduardo Moreno</p>
+
+        <!-- Nav buttons at the left -->
+        <nav class="NavButtons d-flex gap-3 ps-3">
+            <a href="index.html" class="logo-text">Home</a>
+            <a href="navigation.html" class="logo-text2">Navigation</a>
+            <a href="inspiration.html" class="logo-text2">Inspiration</a>
+            <a href="scheduele.html" class="logo-text2">Schedule</a>
+        </nav>
+        </div>
+    </div>
+    </header>
+
+
+    <!-- ===== MAIN CONTENT WRAPPER ===== -->
+    <div class="main-content">
+
+        <!-- ===== HERO SECTION ===== -->
+        <div class="hero-wrapper">
+            <div class="hero-content container d-flex justify-content-center align-items-center">
+                <div class="side-by-side d-flex align-items-center gap-4">
+                    <div class="flex-shrink-0">
+                        <img src="images/Yo.jpg" alt="My profile picture" width="400" />
+                    </div>
+
+                    <div class="flex-grow-1 ms-3">
+                        <h1 class="mainTitle">Hello, I'm Eduardo Moreno.</h1>
+                        <h1 class="mainTitle">I'm a human.</h1>
+                        <p class="tagline">(a funny one)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative blob -->
+            <div class="blob" aria-hidden="true"></div>
+        </div>
+
+        <!-- ===== MAIN SECTIONS ===== -->
+        <main>
+
+            <!-- About Me -->
+            <section id="about-me">
+                <p class="usualText2">Hey there, I'm Eddy a computer science student and music lover.</p>
+                <p class="usualText2">I'm interested in web development and artificial intelligence.</p>
+                <p class="usualText2">I am from Jalisco, Mexico.</p>
+            </section>
+
+
+            <!-- Background -->
+            <section id="Background">
+                <h1 class="Subtext2">Background</h1>
+                <p>I was born in Guadalajara, Jalisco. I'm an electronics system technologist.</p>
+                <p>I have a passion for technology and programming. I started learning to code when I was 16 years old.</p>
+                <p>I am studying two careers: Digital Animation Engineering and Computer Science Engineering.</p>
+
+                <h1 class="Subtext2">Goal</h1>
+                <p>My goal is to become a backend developer.</p>
+            </section>
+
+            <!-- Education -->
+            <section id="Education">
+                <section id="Education" class="my-5">
+                <h1 class="Subtext2 mb-4">Education</h1>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered align-middle text-center">
+                    <thead class="table-dark">
+                        <tr>
+                        <th>Academic Level</th>
+                        <th>Logo</th>
+                        <th>School</th>
+                        <th>Start</th>
+                        <th>End</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>Elementary</td>
+                        <td><img src="images/AntonioCaso.jpg" alt="Antonio Caso logo" class="img-fluid" style="max-width:100px;"></td>
+                        <td>Antonio Caso</td>
+                        <td>2009</td>
+                        <td>2015</td>
+                        </tr>
+                        <tr>
+                        <td>Middle School</td>
+                        <td><img src="images/AntonioCaso.jpg" alt="Antonio Caso logo" class="img-fluid" style="max-width:100px;"></td>
+                        <td>Antonio Caso</td>
+                        <td>2015</td>
+                        <td>2018</td>
+                        </tr>
+                        <tr>
+                        <td>High School</td>
+                        <td><img src="images/Ceti.jpg" alt="CETI logo" class="img-fluid" style="max-width:150px;"></td>
+                        <td>CETI Colomos</td>
+                        <td>2018</td>
+                        <td>2022</td>
+                        </tr>
+                        <tr>
+                        <td>University</td>
+                        <td><img src="images/up-logo.jpg" alt="UP logo" class="img-fluid" style="max-width:100px;"></td>
+                        <td>Universidad Panamericana GDL</td>
+                        <td>2022</td>
+                        <td>2027</td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Favorite Quote -->
+            <section id="Favorite-Quote">
+                <h1 class="Subtext2">Favorite Quote</h1>
+                <div class="row align-items-center">
+                    <div class="col-lg-4">
+                        <img src="images/lincon.jpg" alt="Abraham Lincoln" width="200" height="250">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="quote-content">
+                            
+                            <p class="ClassyQuote">"I'm not bound to succeed, but I am bound to live up to the light I have."</p>
+                            <p class="ClassyText">- Abraham Lincoln</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- Skills -->
+            <section id="Skills" class="my-5">
+                <h1 class="Subtext2 mb-4">Skills</h1>
+                <div class="row">
+                    <!-- Progress bars - 7 columns -->
+                    <div class="col-md-7">
+                        <div class="mb-3">
+                            <h3>Programming in Python</h3>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: 40%;">40%</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <h3>Programming in Java</h3>
+                            <div class="progress">
+                                <div class="progress-bar bg-info" style="width: 50%;">50%</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <h3>Unity</h3>
+                            <div class="progress">
+                                <div class="progress-bar bg-warning" style="width: 50%;">50%</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <h3>Illustration</h3>
+                            <div class="progress">
+                                <div class="progress-bar bg-primary" style="width: 60%;">60%</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <h3>Video Editing</h3>
+                            <div class="progress">
+                                <div class="progress-bar bg-danger" style="width: 30%;">30%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel - 4 columns -->
+                    <div class="col-md-4">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images\skills\java.webp" class="d-block w-100" alt="java">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images\skills\krita.png" class="d-block w-100" alt="krita">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images\skills\premiere.png" class="d-block w-100" alt="premiere">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images\skills\python.png" class="d-block w-100" alt="python">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images\skills\unity.png" class="d-block w-100" alt="unity">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hobbies -->
+            <section id="Hobbies">
+                <h1 class="Subtext2">Hobbies</h1>
+                <p>My hobbies are watching movies, listening to music, drawing, reading, and playing videogames.</p>
+            </section>
+
+            <!-- Food -->
+            <section id="Food">
+                <h1 class="Subtext2">Food</h1>
+                <div class="foodSection">
+                    <h4>Favorite cuisines</h4>
+                    <h4>Least favorite cuisines</h4>
+
+                </div>
+
+                <div class="foodSection">
+                    
+                    <ul>
+                        <li>Mexican</li>
+                        <li>Italian</li>
+                        <li>Japanese</li>
+                        <li>Turkish</li>
+                        <li>Korean</li>
+                    </ul>
+
+                    
+                    <ul>
+                        <li>English</li>
+                        <li>Lebanese</li>
+                        <li>Scottish</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Books, Movies & TV Shows -->
+            <section id="Books-Movies-TV">
+                <h1 class="Subtext2">Books, Movies and TV Shows</h1>
+                <table style="border-collapse: collapse; border: none; width:100%;">
+                    <tr>
+                        <!-- Books -->
+                        <td style="border: none; padding-left: 10px; vertical-align: top; width: 33%;">
+                            <img src="images/1984.jpg" alt="1984 book cover" width="200" height="250">
+                            <p class="Subtext">Favorite Books</p>
+                            <ul>
+                                <li>1984 by George Orwell</li>
+                                <li>I, Robot by Isaac Asimov</li>
+                                <li>Death with Interruptions by José Saramago</li>
+                            </ul>
+                        </td>
+                        <!-- Movies -->
+                        <td style="border: none; padding-left: 10px; vertical-align: top; width: 33%;">
+                            <img src="images/aftersun.jpg" alt="Aftersun movie poster" width="200" height="250">
+                            <p class="Subtext">Favorite Movies</p>
+                            <ul>
+                                <li>Aftersun</li>
+                                <li>Whiplash</li>
+                                <li>The Fantastic Mr. Fox</li>
+                            </ul>
+                        </td>
+                        <!-- TV Shows -->
+                        <td style="border: none; padding-left: 10px; vertical-align: top; width: 33%;">
+                            <img src="images/atlanta.jpg" alt="Atlanta TV show poster" width="200" height="250">
+                            <p class="Subtext">Favorite TV Shows</p>
+                            <ul>
+                                <li>Atlanta</li>
+                                <li>After Life</li>
+                                <li>The Midnight Gospel</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+
+        </main>
+
+    </div> <!-- End main-content -->
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2025 Eduardo Moreno</p>
+        <p>Contact me at: <a href="mailto:0260522@up.edu.mx">0260522@up.edu.mx</a></p>
+        <p>Follow me on <a href="https://www.linkedin.com/in/jos%C3%A9-eduardo-moreno-paredes-3b4396316/">LinkedIn</a></p>
+        <p>GitHub profile: <a href="https://github.com/EduardoAzuul">EduardoAzuul</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
