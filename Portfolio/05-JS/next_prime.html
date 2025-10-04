@@ -11,14 +11,29 @@
     <title>JS Exercise - Find Next Prime Number</title>
 
     <script type="text/javascript">
+        function isPrime(num) {
+            if (num < 2) return false;
+            if (num === 2) return true;
+            if (num % 2 === 0) return false;
+            
+            // Only check up to square root for efficiency
+            for (var i = 3; i <= Math.sqrt(num); i += 2) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
         function checkPrime() {
             var id = document.getElementById("num");
             var number = parseInt(document.getElementById("num").value);
             var maxNum = parseInt(1299827);
             if (number < maxNum && !isNaN(number)) {
                 for (var i = number + 1; i < maxNum; i++) {
-                    //TODO: check if the current number is a prime or not
-                    // If it is, then return it
+                    if(isPrime(i)) {
+                        alert("Next prime number is: " + i);
+                        return i;
+                        
+                    } else
                     continue;
                 }
             } else {
@@ -26,14 +41,7 @@
                 id.value = "";
             }
         }
-        function isPrime(num) {
-            for (var i = 2; i < num; i++) {
-                if (num % i === 0) {
-                    return false;
-                }
-            }
-            return true;
-        }
+
     </script>
 </head>
 
@@ -41,7 +49,7 @@
     <form id="form1" runat="server">
         <div>
             <input type="text" id="num" />
-            <button id="btn" onclick="checkPrime();return false">
+            <button id="btn"  type="button"  onclick="checkPrime();return false">
                 Click To Get Next Prime Number</button>
         </div>
     </form>
