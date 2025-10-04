@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en"  data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boostrap</title>
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+    <!-- SCROLLSPY -->
+<body data-bs-spy="scroll" data-bs-target="#navbar-spy" data-bs-offset="150" tabindex="0">
+
+
+    <!-- Hero with centered screenshot, Color mode, ScrollSpy, Carousel with title and text, dropdown menu with icon -->
+    
+    <header class="bg-dark text-white py-3 fixed-top shadow">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <!-- Logo / Title -->
+            <a href="#" class="navbar-brand text-white fs-3 fw-bold">STRANGERS</a>
+
+            <!-- Navigation -->
+            <nav id="navbar-spy">
+                <div class="nav nav-pills">
+                    <a class="nav-link text-white" href="#home">Home</a>
+                    <a class="nav-link text-white" href="#humankind">Humankind</a>
+                    <a class="nav-link text-white" href="#inspiration">Inspiration</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <section id="home">
+    <!-- HERO CENTERED SCRREENSHOT -->
+    <div class="px-2 pt-5 my-5 text-center border-bottom">
+        <h1 class="display-4">Strangers</h1>
+        <div class="col-lg-6 mx-auto">
+        <p class="lead">A small look into others eyes</p>
+        </div>
+        <div class="overflow-hidden" style="max-height: 80vh;">
+            <div class="container px-8">
+                <img src="images/kids.jpg" class="img-fluid rounded" alt="Hero Image">
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- COLOR MODE -->
+    
+    <section id="ColorMode">
+        <div class="container text-center mb-4">
+            <button id="colorModeBtn" class="btn btn-secondary" onclick="setTheme()">
+                <i class="bi bi-moon-fill"></i> Toggle Dark/Light Mode
+            </button>
+        </div>
+    </section>
+
+
+
+    <!-- Carousel -->
+    <section id="humankind">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="images/pexels-brett-sayles-1073097.jpg" 
+                class="d-block w-100" alt="Portrait 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Love</h5>
+                    <p>I'm just a man trained to fight. To love I never had the skill.</p>
+                </div>
+                </div>
+
+                <div class="carousel-item">
+                <img src="images/pexels-brett-sayles-1445704.jpg" 
+                class="d-block w-100" alt="Portrait 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Hope</h5>
+                    <p>Just like the sun, I've been pacient. Hoping on this light i'm holding</p>
+                </div>
+                </div>
+
+                <div class="carousel-item">
+                <img src="images/pexels-pixabay-157886.jpg" 
+                class="d-block w-100" alt="Portrait 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Memories</h5>
+                    <p>Sat on my own I'm reminded of you</p>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- INSPIRATION SECTION -->
+    <section id="inspiration">
+        <div class="container">
+            <h2 class="display-5 text-center mb-5">Inspiration</h2>
+            
+            <!-- Dropdown Menu -->
+            <div class="dropdown text-center">
+                <a class="btn btn-secondary dropdown-toggle btn-lg" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-feather"></i> Videos
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=kZN9vysQnhc">You're way more interesting than you think you are</a></li>
+                    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=OvBpnnO58Js">The cure to burnout is art</a></li>
+                    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=F8Zs8xMTDzo">In pursuit of an extraordinary life</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="footer">
+        <footer class="bg-dark text-white text-center py-3 mt-5">
+            <p class="mb-0">&copy; 2025 Strangers — All rights reserved.</p>
+        </footer>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="colorMode.js"></script>
+        
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const scrollSpyElement = document.body;
+
+  scrollSpyElement.addEventListener('activate.bs.scrollspy', function (event) {
+    // The event.target will be the currently activated link
+    const activeLink = document.querySelector('#navbar-spy .nav-link.active');
+    if (activeLink) {
+      console.log('🟡 ScrollSpy active section:', activeLink.getAttribute('href'));
+    } else {
+      console.log('⚪ No active link detected');
+    }
+  });
+});
+</script>
+</body>
+</html>

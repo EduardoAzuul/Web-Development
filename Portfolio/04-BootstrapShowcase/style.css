@@ -1,0 +1,58 @@
+/* Body positioning for ScrollSpy */
+body {
+    position: relative;
+}
+
+/* Section minimum heights and padding for fixed header */
+#home {
+    min-height: 100vh;
+    padding-top: 80px; /* Account for fixed header */
+}
+
+#humankind {
+    min-height: 100vh;
+    padding-top: 80px; /* Account for fixed header */
+}
+
+#inspiration {
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+
+.nav{
+    background-color: #343a40; /* Dark background for the navbar */
+}
+
+section {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1020;
+}
+
+/* Base nav link styles */
+#navbar-spy .nav-link {
+    color: white !important;
+    transition: color 0.3s, text-decoration 0.3s;
+    text-decoration: none;
+}
+
+/* Active state with ScrollSpy */
+#navbar-spy .nav-link.active {
+    color: #ffc107 !important;
+    font-weight: bold !important;
+    text-decoration: underline !important;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+}
+
+.humankind {
+    max-height: 400px;
+}
