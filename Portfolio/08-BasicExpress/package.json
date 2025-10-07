@@ -4,6 +4,7 @@
   "description": "This exercise should show how we can serve multiple static pages and basic interaction via form parameters",
   "main": "server.js",
   "scripts": {
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
@@ -13,5 +14,8 @@
   "dependencies": {
     "body-parser": "^2.2.0",
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
