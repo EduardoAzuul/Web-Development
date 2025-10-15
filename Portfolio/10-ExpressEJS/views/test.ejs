@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+
+<main>
+    <h2>Welcome, <%= name %>!</h2>
+    <p>We're glad to have you here. Your information was received securely via POST method.</p>
+    
+    <div>
+        <h3>User Information</h3>
+        <p><strong>Name:</strong> <%= name %></p>
+        <p><strong>Security Level:</strong> SECURED (POST)</p>
+        <p><strong>Status:</strong> Successfully logged in</p>
+    </div>
+
+    <p>
+        <a href="/">Go back to home</a>
+    </p>
+</main>
+
+<%- include('partials/footer') %>

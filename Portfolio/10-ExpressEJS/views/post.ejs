@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+
+<main>
+    <h2>Welcome, <%= name %>!</h2>
+
+    <article>
+        <h3><%= post.title %></h3>
+        <p><%= post.content %></p>
+    </article>
+
+    <section>
+        <h3>Edit Post</h3>
+        <form action="/post/<%= postId %>/edit" method="POST">
+            <div>
+                <label for="title">Title:</label><br>
+                <input type="text" name="title" id="title" value="<%= post.title %>"/>
+            </div>
+            <div>
+                <label for="content">Content:</label><br>
+                <textarea name="content" id="content" rows="10"><%= post.content %></textarea>
+            </div>
+            <input type="submit" value="Update Post"/>
+        </form>
+    </section>
+
+    <section>
+        <form action="/post/<%= postId %>/delete" method="POST">
+            <input type="submit" value="Delete Post"/>
+        </form>
+    </section>
+
+    <p>
+        <a href="/home">← Back to all posts</a>
+    </p>
+</main>
+
+<%- include('partials/footer') %>

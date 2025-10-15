@@ -9,12 +9,13 @@
 </head>
 
 <body>
-    <img src="../images/StarLion.png" alt="lion brewery" />
+    <img src="/images/StarLion.png" alt="lion brewery">
     <h1>Welcome to my landing page</h1>
-    <form>
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" />
-        <input type="submit" />
+
+    <form action="/login" method="POST">
+        <label for="name-post">Name:</label>
+        <input type="text" name="name" id="name-post" required />
+        <input type="submit" value="Submit (POST)" />
     </form>
 </body>
 

@@ -1,0 +1,44 @@
+<%- include('partials/header') %>
+
+<main>
+    <h2>Welcome back, <%= name %>!</h2>
+    
+    <section>
+        <h3>Create a New Post</h3>
+        <form action="/post" method="POST">
+            <div style="margin-bottom: 10px;">
+                <label for="title">Title:</label><br>
+                <input type="text" name="title" id="title" required style="width: 100%; padding: 5px;" />
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="content">Content:</label><br>
+                <textarea name="content" id="content" rows="5" required style="width: 100%; padding: 5px;"></textarea>
+            </div>
+            <input type="submit" value="Publish Post" />
+        </form>
+    </section>
+
+    <section>
+        <h3>All Blog Posts</h3>
+        <% if (posts.length === 0) { %>
+            <p>No posts </p>
+        <% } else { %>
+            <% posts.forEach((post, index) => { %>
+                <div>
+                    <h4><%= post.title %></h4>
+                    <p>
+                        <%= post.content.substring(0, 100) %>
+                        <% if (post.content.length > 100) { %>...<% } %>
+                    </p>
+                    <a href="/post/<%= index %>">Read More</a>
+                </div>
+            <% }); %>
+        <% } %>
+    </section>
+
+    <p>
+        <a href="/">Logout</a>
+    </p>
+</main>
+
+<%- include('partials/footer') %>
