@@ -5,6 +5,8 @@ const axios = require("axios");
 const FormData = require("form-data");
 
 const app = express();
+const API_KEY = "89be36d7fd6fa2ab7a3ac544b794b450";
+const URL = "api.openweathermap.org";
 
 // https get
 app.get("/", (req, res) => {
