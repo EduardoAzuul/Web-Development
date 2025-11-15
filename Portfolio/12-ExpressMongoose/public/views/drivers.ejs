@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F1 Drivers List</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+        .view-toggle {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .toggle-btn {
+            padding: 10px 20px;
+            margin: 0 5px;
+            border: 2px solid #e10600;
+            background-color: white;
+            color: #e10600;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .toggle-btn.active {
+            background-color: #e10600;
+            color: white;
+        }
+        
+        .toggle-btn:hover {
+            background-color: #e10600;
+            color: white;
+        }
+        
+        .team-group {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .team-header {
+            background-color: #e10600;
+            color: white;
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .team-drivers {
+            padding: 0;
+        }
+        
+        .team-drivers table {
+            margin: 0;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('partials/header') %>
+
+    <main>
+        <section class="driver-section">
+            <h2>Current F1 Drivers</h2>
+
+            <!-- View Toggle Buttons -->
+            <div class="view-toggle">
+                <button class="toggle-btn active" onclick="toggleView('drivers')" id="driversBtn">
+                    View by Drivers
+                </button>
+                <button class="toggle-btn" onclick="toggleView('teams')" id="teamsBtn">
+                    View by Teams
+                </button>
+            </div>
+
+            <!-- Show message if no drivers exist -->
+            <% if (drivers.length === 0) { %>
+                <div class="no-drivers">
+                    <p>No drivers found. Add your first driver!</p>
+                    <a href="/" class="btn-primary">Add Driver</a>
+                </div>
+            <% } else { %>
+                <!-- Drivers View (Individual List) -->
+                <div id="driversView">
+                    <table class="driver-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Code</th>
+                                <th>Name</th>
+                                <th>Date of Birth</th>
+                                <th>Nationality</th>
+                                <th>Team</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% drivers.forEach(function(driver) { %>
+                                <tr>
+                                    <td class="driver-number"><%= driver.num %></td>
+                                    <td class="driver-code"><%= driver.code %></td>
+                                    <td class="driver-name">
+                                        <%= driver.forename %> <%= driver.surname %>
+                                    </td>
+                                    <td class="driver-dob"><%= driver.dob %></td>
+                                    <td class="driver-nationality"><%= driver.nationality %></td>
+                                    <td class="driver-team"><%= driver.team %></td>
+                                    <td class="driver-actions">
+                                        <% if (driver.url) { %>
+                                            <a href="<%= driver.url %>" target="_blank" class="btn-link">
+                                                View Profile
+                                            </a>
+                                        <% } else { %>
+                                            <span class="text-muted">No URL</span>
+                                        <% } %>
+                                        <a href="/?edit=<%= driver.code %>" class="btn-edit">Edit</a>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+
+                    <div class="driver-summary">
+                        <p>Total Drivers: <strong><%= drivers.length %></strong></p>
+                    </div>
+                </div>
+
+                <!-- Teams View (Grouped by Team) -->
+                <div id="teamsView" class="hidden">
+                    <%
+                        // Group drivers by team
+                        var driversByTeam = {};
+                        drivers.forEach(function(driver) {
+                            var team = driver.team || 'Unknown';
+                            if (!driversByTeam[team]) {
+                                driversByTeam[team] = [];
+                            }
+                            driversByTeam[team].push(driver);
+                        });
+                        
+                        // Sort teams alphabetically
+                        var sortedTeams = Object.keys(driversByTeam).sort();
+                    %>
+                    
+                    <% sortedTeams.forEach(function(teamName) { %>
+                        <div class="team-group">
+                            <div class="team-header">
+                                <%= teamName %> (<%= driversByTeam[teamName].length %> driver<%= driversByTeam[teamName].length !== 1 ? 's' : '' %>)
+                            </div>
+                            <div class="team-drivers">
+                                <table class="driver-table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Code</th>
+                                            <th>Name</th>
+                                            <th>Date of Birth</th>
+                                            <th>Nationality</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% driversByTeam[teamName].forEach(function(driver) { %>
+                                            <tr>
+                                                <td class="driver-number"><%= driver.num %></td>
+                                                <td class="driver-code"><%= driver.code %></td>
+                                                <td class="driver-name">
+                                                    <%= driver.forename %> <%= driver.surname %>
+                                                </td>
+                                                <td class="driver-dob"><%= driver.dob %></td>
+                                                <td class="driver-nationality"><%= driver.nationality %></td>
+                                                <td class="driver-actions">
+                                                    <% if (driver.url) { %>
+                                                        <a href="<%= driver.url %>" target="_blank" class="btn-link">
+                                                            View Profile
+                                                        </a>
+                                                    <% } else { %>
+                                                        <span class="text-muted">No URL</span>
+                                                    <% } %>
+                                                    <a href="/?edit=<%= driver.code %>" class="btn-edit">Edit</a>
+                                                </td>
+                                            </tr>
+                                        <% }) %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    <% }) %>
+
+                    <div class="driver-summary">
+                        <p>Total Teams: <strong><%= sortedTeams.length %></strong></p>
+                        <p>Total Drivers: <strong><%= drivers.length %></strong></p>
+                    </div>
+                </div>
+            <% } %>
+
+            <!-- Button to add new driver -->
+            <div class="action-buttons">
+                <a href="/" class="btn-secondary">Add New Driver</a>
+            </div>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>
+
+    <script>
+        function toggleView(view) {
+            const driversView = document.getElementById('driversView');
+            const teamsView = document.getElementById('teamsView');
+            const driversBtn = document.getElementById('driversBtn');
+            const teamsBtn = document.getElementById('teamsBtn');
+
+            if (view === 'drivers') {
+                driversView.classList.remove('hidden');
+                teamsView.classList.add('hidden');
+                driversBtn.classList.add('active');
+                teamsBtn.classList.remove('active');
+            } else {
+                driversView.classList.add('hidden');
+                teamsView.classList.remove('hidden');
+                driversBtn.classList.remove('active');
+                teamsBtn.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

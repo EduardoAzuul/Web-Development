@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongo DB - F1 test</title>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+
+<%- include('partials/header') %>
+
+    <form action="<%= driverToEdit ? '/drivers/update' : '/drivers' %>" method="POST" class="driver-form">
+        <% if (driverToEdit) { %>
+            <input type="hidden" name="originalCode" value="<%= driverToEdit.code %>" />
+            <h3>Edit Driver</h3>
+        <% } else { %>
+            <h3>Add New Driver</h3>
+        <% } %>
+
+        <div class="form-group">
+            <label for="num">Number:</label>
+            <input type="number" id="num" name="num" value="<%= driverToEdit ? driverToEdit.num : '' %>" required />
+        </div>
+
+        <div class="form-group">
+            <label for="code">Code:</label>
+            <input type="text" id="code" name="code" maxlength="3" value="<%= driverToEdit ? driverToEdit.code : '' %>" required />
+        </div>
+
+        <div class="form-group">
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="name" value="<%= driverToEdit ? driverToEdit.forename : '' %>" required />
+        </div>
+
+        <div class="form-group">
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" value="<%= driverToEdit ? driverToEdit.surname : '' %>" required />
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" value="<%= driverToEdit ? driverToEdit.dob : '' %>" required />
+        </div>
+
+        <div class="form-group">
+            <label for="nation">Nationality:</label>
+            <select id="nation" name="nation" required>
+                <option value="">Select nationality</option>
+                <% countries.forEach(country => { %>
+                    <option value="<%= country.code %>" <%= driverToEdit && driverToEdit.nationality === country.code ? 'selected' : '' %>>
+                        <%= country.label %>
+                    </option>
+                <% }) %>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="team">Team:</label>
+            <select id="team" name="team" required>
+                <option value="">Select team</option>
+                <% teams.forEach(team => { %>
+                    <option value="<%= team.code %>" <%= driverToEdit && driverToEdit.team === team.label ? 'selected' : '' %>>
+                        <%= team.label %>
+                    </option>
+                <% }) %>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="url">Wikipedia URL:</label>
+            <input type="url" id="url" name="url" value="<%= driverToEdit ? driverToEdit.url : '' %>" required />
+        </div>
+
+        <button type="submit" class="btn-primary">
+            <%= driverToEdit ? 'Update Driver' : 'Add Driver' %>
+        </button>
+        
+        <% if (driverToEdit) { %>
+            <a href="/" class="btn-secondary">Cancel</a>
+        <% } %>
+    </form>
+
+<%- include('partials/footer') %>
+</body>

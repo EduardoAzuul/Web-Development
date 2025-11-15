@@ -1,26 +1,183 @@
-html {
-    min-height: 100%;
-    position: relative;
+/* --- Reset y base general --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html, body {
+  min-height: 100%;
+  background-color: #f9f6ec;
+  color: #333;
+}
+
+/* --- Layout general --- */
 body {
-    background-color: beige !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
-img {
-    width: 80px;
+/* --- HEADER --- */
+header {
+  background-color: #fff5d1;
+  border-bottom: 2px solid #e2cf7a;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  color: #b99a0d;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+header nav {
+  margin-top: 0.5rem;
+}
+
+header nav a {
+  color: #7b6b2f;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 0.75rem;
+  transition: color 0.2s ease-in-out;
+}
+
+header nav a:hover {
+  color: #c9b220;
+}
+
+/* --- FORMULARIO --- */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+
+form {
+  background: #fffaf1;
+  border: 2px solid #e2cf7a;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  text-align: center;
+  color: #b99a0d;
+  margin-bottom: 1.5rem;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  border: 2px solid #d6c26b;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  background-color: #fffdf5;
 }
 
 #num,
 #code {
-    width: 35px;
+  width: 80px;
+  display: inline-block;
+  text-align: center;
 }
 
-form input,
-select {
-    border-style: none;
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+select:focus {
+  outline: none;
+  border-color: #c9b220;
+  box-shadow: 0 0 5px rgba(201, 178, 32, 0.6);
 }
 
-input[type=text]:focus {
-    border: 4px solid #c9b220;
+/* --- BOTÓN DE ENVÍO --- */
+input[type="submit"] {
+  background-color: #c9b220;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
 }
+
+input[type="submit"]:hover {
+  background-color: #b49d1d;
+}
+
+/* --- IMÁGENES --- */
+img {
+  width: 80px;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: #fff5d1;
+  border-top: 2px solid #e2cf7a;
+  text-align: center;
+  padding: 1.5rem 0;
+  color: #6b5f3b;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.drivers-section {
+  padding: 2rem;
+  background-color: #faf8f0;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 1000px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.drivers-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.drivers-table th, .drivers-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.drivers-table th {
+  background-color: #c9b220;
+  color: white;
+}
+
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  form {
+    padding: 1.2rem;
+  }
+
+  input,
+  select {
+    font-size: 0.95rem;
+  }
+}
+
