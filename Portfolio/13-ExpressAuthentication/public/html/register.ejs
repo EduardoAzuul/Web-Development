@@ -11,14 +11,24 @@
 
 <body>
     <img src="../images/StarLion.png" alt="lion brewery" />
-    <h1>Welcome to my page</h1>
-    <form action="/login" method="get">
+    <h1>Registration</h1>
+    <form action="/register" method="post">
         <label for="user">User</label>
-        <input type="text" name="user" id="user" />
-        <label for="pass">Password</label>
-        <input type="password" name="pass" id="pass" />
+        <input type="text" name="username" id="user" />
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+
         <input type="submit" />
     </form>
+
+
+    <button>
+        <a href="/">Back to Login</a>
+    </button>
 </body>
 
 </html>

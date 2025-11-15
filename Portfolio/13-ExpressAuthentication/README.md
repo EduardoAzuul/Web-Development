@@ -1,13 +1,13 @@
 # Express Authentication, Cookies & Session
 
 - Using the provided code, crete an app with:
-  - A simple registration form that asks the user for a username, email and password.
-  - Using **passport-local-mongoose** save the information in our database and set the **session** information
-    - Once the user is registered, he should be granted access to the secrets page
-  - Crate a form that will allow the just registered user to access the page only with its user and password.
-  - Implement a _logout_ method
-  - Check that you can no access the page with the path directly in the browser, and that if you are trying to access without authorization, you are sent to either register or login.
-- Setup your secret phrase using a _.env_ file
+  - A simple registration form that asks the user for a username, email and password.:) 
+  - Using **passport-local-mongoose** save the information in our database and set the **session** information:)
+    - Once the user is registered, he should be granted access to the secrets page:)
+  - Crate a form that will allow the just registered user to access the page only with its user and password.:)
+  - Implement a _logout_ method:)
+  - Check that you can no access the page with the path directly in the browser, and that if you are trying to access without authorization, you are sent to either register or login.:)
+- Setup your secret phrase using a _.env_ file :)
 - Implement a **google oauth 2.0** strategy and make sure that your user is able to access our page when he is authorized and not when he has not been granted access.
 
 ---
