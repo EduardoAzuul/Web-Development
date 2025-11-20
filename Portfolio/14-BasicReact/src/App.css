@@ -1,0 +1,96 @@
+.movie-gallery {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.movie-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(138, 43, 226, 0.5);
+}
+
+.movie-image-container {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+}
+
+.movie-poster {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+/* Affiliation overlay that appears on hover */
+.affiliation-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  transition: all 0.4s ease;
+  z-index: 10;
+}
+
+/* Character/affiliation logo in the overlay */
+.affiliation-logo {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  animation: fadeInScale 0.4s ease;
+}
+
+/* Affiliation text styling */
+.affiliation-text {
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  animation: fadeInScale 0.4s ease;
+  letter-spacing: 2px;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.character-detail {
+  animation: fadeIn 0.5s ease-in;
+  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
+}
+
+.character-image {
+  max-height: 400px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
